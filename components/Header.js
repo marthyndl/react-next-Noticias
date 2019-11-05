@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import InputSearch from '../components/InputSearch';
+
 
 const linkStyle = {
   marginRight: 15
@@ -11,16 +13,18 @@ const optionsCountry = [
 {value: '4', name: 'Espectáculos'},
 {value: '5', name: 'Deportes'}];
 
+
 const Header = () => (
   <div>
       <Link href="/">
         <a style={linkStyle} >Home</a>
       </Link>
       {optionsCountry.map(option => (   
-      <Link key={option.value} href="/p/[category]" as={`/p/${option.value}`}>
+      <Link key={option.value} href="/post/[category]" as={`/post/${option.value}`}>
         <a style={linkStyle} >{option.name}</a>
       </Link>
       ))}
+      <InputSearch />
   </div>
 );
 

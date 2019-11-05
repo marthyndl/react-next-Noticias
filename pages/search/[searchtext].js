@@ -21,8 +21,8 @@ const SearchText = ({ errorCode, news }) => {
 
 SearchText.getInitialProps = async (context) => {
 
-  const { searchText } = context.query;
-  const data = await fetchNewsByText(searchText);
+  const { searchtext } = context.query;
+  const data = await fetchNewsByText(searchtext);
   if(!data.errorCode) { 
     console.log(`Show data fetched. Count: ${data.news.length}`);
   }
