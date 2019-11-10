@@ -1,7 +1,5 @@
-import React from "react";
-import styled from "styled-components";
 import moment from 'moment';
-import { Container, Title, Divider, Content, Href} 
+import { Container, TitleContainer, Divider, Content, Href} 
       from '../styledComponents/GeneralStyled.js';
 import { Grid, Card, TitleCard, PictureCard, TimeAndSourceCard} 
       from '../styledComponents/CardsStyled.js';
@@ -9,7 +7,7 @@ import { Grid, Card, TitleCard, PictureCard, TimeAndSourceCard}
 
 const CardNews = (props) => (  
   <Container>
-    <Title>{props.title}</Title>
+    <TitleContainer>{props.title}</TitleContainer>
     <Divider></Divider>
     <Grid>
         {props.news.map(item => (

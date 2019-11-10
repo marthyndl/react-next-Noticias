@@ -20,13 +20,15 @@ const Category = ({ errorCode, news, title }) => {
 
 Category.getInitialProps = async (context) => {
 
+  
   const { category } = context.query;
-  const data = await fetchNewsByCategory(category);
+
+  const data = await fetchNewsByCategory(category.split('-')[1]);
   if(!data.errorCode) { 
     console.log(`Show data fetched. Count: ${data.news.length}`);
   }
   return {
-    errorCode: data.errorCode, news: data.news, title:category
+    errorCode: data.errorCode, news: data.news, title:category.split('-')[0]
   }
 }
 

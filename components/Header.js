@@ -1,6 +1,7 @@
 import Link from 'next/link';
 //import InputSearch from '../components/InputSearch';
-import { MainHeader, NavHeader, TopHeader, TitleHeader, NavList, NavListItem } from '../styledComponents/GeneralStyled.js';
+import { MainHeader, NavHeader, TopHeader, TitleHeader, NavList, NavListItem } 
+      from '../styledComponents/GeneralStyled.js';
 
 
 const optionsCountry = [
@@ -25,7 +26,7 @@ const Header = () => (
         </NavListItem>
           {optionsCountry.map(option => ( 
             <NavListItem>  
-              <Link key={option.value} href="/post/[category]" as={`/post/${option.value}`}>
+              <Link key={option.value} href="/post/[category]" as={`/post/${option.name.toLowerCase()}-${option.value}`}>
                 <a>{option.name}</a>
               </Link>
           </NavListItem>

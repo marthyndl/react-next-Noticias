@@ -23,7 +23,7 @@ export const Layout = styled.div`
 export const MainHeader = styled.header`
   padding: 0;
   width: 100%;
-  background: white;
+  background: linear-gradient(to bottom, rgb(252, 75, 99) 0%, rgba(255, 255, 255, 0.01) 100%);
 `;
 
 export const TopHeader = styled.nav`
@@ -44,11 +44,12 @@ export const NavHeader = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   max-width: 1108px;
-  padding: 0 20px;
+  padding: 15px 20px;
   margin: 0 auto;
   justify-content: space-between;
   list-style: none;
   box-sizing: border-box;
+  background:white;
 `;
 
 export const NavListItem = styled.li`
@@ -57,8 +58,9 @@ export const NavListItem = styled.li`
 
 export const TitleHeader = styled.div`
     font-size: 62px;
-    align: center;
-    color: ${color_pink}
+    text-align: center;
+    
+    color: black
 `;
 
 export const Container = styled.div`
@@ -68,7 +70,7 @@ export const Container = styled.div`
   box-sizing: border-box
 `;
 
-export const Title = styled.div`
+export const TitleContainer = styled.div`
   font-size: 52px;
   font-weight: 400;
   margin-bottom: 20px;

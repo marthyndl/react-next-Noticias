@@ -30,7 +30,7 @@ export const TitleItemList =  styled(TitleList)`
 `;
 
 export const PictureItemList = styled(Picture)`
-  height: 160px;
+  height: 120px;
   width: 200px;
   flex-shrink: 0;
 `;
