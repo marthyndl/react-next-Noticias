@@ -2,9 +2,6 @@
 import React, { Component, Fragment} from "react";
 import Link from 'next/link';
 
-const linkStyle = {
-    marginRight: 15
-  };
 
 class InputSearch extends Component {
     constructor(props) {
@@ -23,7 +20,7 @@ class InputSearch extends Component {
         <Fragment>
             <input type="search" value={this.state.value} onChange={this.handleChange} />
             <Link href="/search/[searchtext]" as={`/search/${this.state.value}`}>
-                <a style={linkStyle} >Búsqueda</a>
+                <a>Búsqueda</a>
             </Link>
         </Fragment>
       );

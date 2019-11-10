@@ -4,7 +4,6 @@ import moment from 'moment';
 const today = moment().format('YYYY-MM-DD')
 const baseRoot = 'https://api.canillitapp.com';
 const latestUrl= `${baseRoot}/latest/${today}`;
-const popularUrl = `${baseRoot}/popular`;
 const categoryUrl = `${baseRoot}/news/category`;
 const searchTextUrl = `${baseRoot}/search`;
 
@@ -12,23 +11,6 @@ export const fetchNews = async () => {
   try{
     console.log(latestUrl);
     const res = await fetch(latestUrl)
-    const errorCode = res.status > 200 ? res.status : false;
-    let data = null;
-    if (res.status == 200) {
-      data = await res.json();
-    }
-    return { errorCode, news: data }
-  } catch(error) {
-    console.log(error);
-    return { errorCode:500, news: null }
-  }
-
-}
-
-export const fetchNewsPopular = async () => {
-  try{
-    console.log(popularUrl);
-    const res = await fetch(popularUrl)
     const errorCode = res.status > 200 ? res.status : false;
     let data = null;
     if (res.status == 200) {

@@ -1,69 +1,34 @@
 import React from "react";
+import styled from "styled-components";
+import moment from 'moment';
+import { Container, Title, Divider, Content, Href} 
+      from '../styledComponents/GeneralStyled.js';
+import { Grid, Card, TitleCard, PictureCard, TimeAndSourceCard} 
+      from '../styledComponents/CardsStyled.js';
+  
 
-import {
-    CardWrapper,
-    CardHeader,
-    CardHeading,
-    CardBody,
-    CardIcon,
-    CardFieldset,
-    CardInput,
-    CardOptionsItem,
-    CardOptions,
-    CardOptionsNote,
-    CardButton,
-    CardLink
-  } from "./Card";
-
-const CardNews = (props) => (
-
-    <CardWrapper>
-        <CardHeader>
-          <CardHeading>Sign in</CardHeading>
-        </CardHeader>
-
-        <CardBody>
-          <CardFieldset>
-            <CardInput placeholder="Username" type="text" required />
-          </CardFieldset>
-
-          <CardFieldset>
-            <CardInput placeholder="E-mail" type="text" required />
-          </CardFieldset>
-
-          <CardFieldset>
-            <CardInput placeholder="Password" type="password" required />
-            <CardIcon className="fa fa-eye" eye small />
-          </CardFieldset>
-
-          <CardFieldset>
-            <CardOptionsNote>Or sign up with</CardOptionsNote>
-
-            <CardOptions>
-              <CardOptionsItem>
-                <CardIcon className="fab fa-google" big />
-              </CardOptionsItem>
-
-              <CardOptionsItem>
-                <CardIcon className="fab fa-twitter" big />
-              </CardOptionsItem>
-
-              <CardOptionsItem>
-                <CardIcon className="fab fa-facebook" big />
-              </CardOptionsItem>
-            </CardOptions>
-          </CardFieldset>
-
-          <CardFieldset>
-            <CardButton type="button">Sign Up</CardButton>
-          </CardFieldset>
-
-          <CardFieldset>
-            <CardLink>I already have an account</CardLink>
-          </CardFieldset>
-        </CardBody>
-      </CardWrapper>
-
+const CardNews = (props) => (  
+  <Container>
+    <Title>{props.title}</Title>
+    <Divider></Divider>
+    <Grid>
+        {props.news.map(item => (
+          <Card key={item.news_id}>
+            <PictureCard><img src={item.img_url} alt={item.title} height="200" width="390"/></PictureCard>
+            <Content>
+              <Href href={item.url} target="_blank">
+                <TitleCard>{item.title}</TitleCard>
+              </Href>
+              <TimeAndSourceCard>
+                <span>{item.source_name}</span> | 
+                { item.category ? ` ${item.category} | ` : '' }
+                <span>{moment(new Date(item.date*1000)).format('DD-MM-YYYY HH:mm')}</span>
+              </TimeAndSourceCard>
+            </Content>
+          </Card>
+        ))}
+    </Grid>
+  </Container>
 );
 
 export default CardNews;
