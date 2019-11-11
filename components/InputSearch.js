@@ -1,5 +1,9 @@
-import React, { Component, Fragment} from "react";
+import React, { Component} from "react";
 import Link from 'next/link';
+import { SearchContainer, SearchInput } 
+      from '../styledComponents/GeneralStyled.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 class InputSearch extends Component {
@@ -16,12 +20,12 @@ class InputSearch extends Component {
   
     render() {
       return (
-        <Fragment>
-            <input type="search" value={this.state.value} onChange={this.handleChange} />
+        <SearchContainer>
+            <SearchInput type="text" value={this.state.value} onChange={this.handleChange} />
             <Link href="/search/[searchtext]" as={`/search/${this.state.value}`}>
-                <a>Búsqueda</a>
+                <a><FontAwesomeIcon icon={faSearch} color="black" size="lg"/></a>
             </Link>
-        </Fragment>
+        </SearchContainer>
       );
     }
 }

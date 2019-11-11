@@ -23,46 +23,69 @@ export const Layout = styled.div`
 export const MainHeader = styled.header`
   padding: 0;
   width: 100%;
-  background: linear-gradient(to bottom, rgb(252, 75, 99) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(to bottom, rgb(252, 75, 99) 0%, 
+              rgba(255, 255, 255, 0.01) 100%);
 `;
 
 export const TopHeader = styled.nav`
-  padding: 44px 0px;
+  padding: 30px 20px;
 `;
 
 export const NavHeader = styled.nav`
   display: block;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 24px;
-  border-top: 1px solid ${color_gray};
-  border-bottom: 1px solid ${color_gray};
+  border-bottom: 5px solid ${color_gray};
   list-style: none;
-  box-sizing: border-box
+  box-sizing: border-box;
+  background:transparent;
 `;
 
 export const NavList = styled.ul`
   display: flex;
   max-width: 1108px;
-  padding: 15px 20px;
+  padding: 30px 20px;
   margin: 0 auto;
   justify-content: space-between;
   list-style: none;
   box-sizing: border-box;
-  background:white;
 `;
 
 export const NavListItem = styled.li`
   text-decoration: none;
+  padding: 7px 5px;
+  color: red;
+  background-color: transparent!important;
 `;
 
 export const TitleHeader = styled.div`
     font-size: 62px;
     text-align: center;
-    
+    font-weight: bold;
     color: black
 `;
 
+export const StyledLinkHeader = styled.a`
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+`;
+export const SearchContainer = styled.div`
+    max-width: 200px;
+    margin: 0px auto;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 10px 0px; 
+`;
+
+export const SearchInput = styled.input`
+    font-size: 14px;
+    background: transparent;
+    border: none; 
+`;
 export const Container = styled.div`
   width: 100%;
   padding: 20px;

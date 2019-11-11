@@ -1,6 +1,6 @@
 import Link from 'next/link';
-//import InputSearch from '../components/InputSearch';
-import { MainHeader, NavHeader, TopHeader, TitleHeader, NavList, NavListItem } 
+import InputSearch from '../components/InputSearch';
+import { MainHeader, NavHeader, TopHeader, TitleHeader, NavList, NavListItem, StyledLinkHeader } 
       from '../styledComponents/GeneralStyled.js';
 
 
@@ -16,18 +16,19 @@ const Header = () => (
   <MainHeader>
     <TopHeader>
       <TitleHeader>El canillita</TitleHeader>
+      <InputSearch/>
     </TopHeader>
     <NavHeader>
       <NavList>
         <NavListItem>
           <Link href="/">
-            <a>Home</a>
+          <StyledLinkHeader>Home</StyledLinkHeader>
           </Link>
         </NavListItem>
           {optionsCountry.map(option => ( 
             <NavListItem>  
               <Link key={option.value} href="/post/[category]" as={`/post/${option.name.toLowerCase()}-${option.value}`}>
-                <a>{option.name}</a>
+                <StyledLinkHeader>{option.name}</StyledLinkHeader>
               </Link>
           </NavListItem>
           ))}
