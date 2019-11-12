@@ -28,7 +28,7 @@ export const MainHeader = styled.header`
 `;
 
 export const TopHeader = styled.nav`
-  padding: 30px 20px;
+  padding: 30px 100px;
 `;
 
 export const NavHeader = styled.nav`
@@ -54,7 +54,6 @@ export const NavList = styled.ul`
 export const NavListItem = styled.li`
   text-decoration: none;
   padding: 7px 5px;
-  color: red;
   background-color: transparent!important;
 `;
 
@@ -62,6 +61,7 @@ export const TitleHeader = styled.div`
     font-size: 62px;
     text-align: center;
     font-weight: bold;
+    max-width: 1108px;
     color: black
 `;
 
@@ -75,16 +75,19 @@ export const StyledLinkHeader = styled.a`
   }
 `;
 export const SearchContainer = styled.div`
-    max-width: 200px;
     margin: 0px auto;
-    border-bottom: 1px solid rgb(238, 238, 238);
-    padding: 10px 0px; 
+    border-bottom: 2px solid black;
+    float: right;
+  }
 `;
 
 export const SearchInput = styled.input`
     font-size: 14px;
     background: transparent;
     border: none; 
+    &:focus {
+      outline: none
+    }
 `;
 export const Container = styled.div`
   width: 100%;

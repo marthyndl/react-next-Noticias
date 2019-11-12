@@ -21,7 +21,7 @@ class InputSearch extends Component {
     render() {
       return (
         <SearchContainer>
-            <SearchInput type="text" value={this.state.value} onChange={this.handleChange} />
+            <SearchInput type="text" placeholder="Buscar Palabra..." value={this.state.value} onChange={this.handleChange} />
             <Link href="/search/[searchtext]" as={`/search/${this.state.value}`}>
                 <a><FontAwesomeIcon icon={faSearch} color="black" size="lg"/></a>
             </Link>
