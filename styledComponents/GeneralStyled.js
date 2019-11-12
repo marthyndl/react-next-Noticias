@@ -58,11 +58,11 @@ export const NavListItem = styled.li`
 `;
 
 export const TitleHeader = styled.div`
-    font-size: 62px;
-    text-align: center;
-    font-weight: bold;
-    max-width: 1108px;
-    color: black
+  font-size: 62px;
+  text-align: center;
+  font-weight: bold;
+  max-width: 1108px;
+  color: black
 `;
 
 export const StyledLinkHeader = styled.a`
@@ -74,21 +74,30 @@ export const StyledLinkHeader = styled.a`
     cursor: pointer;
   }
 `;
+
 export const SearchContainer = styled.div`
-    margin: 0px auto;
-    border-bottom: 2px solid black;
-    float: right;
-  }
+  margin: 0px auto;
+  border-bottom: 2px solid black;
+  float: right;
 `;
 
 export const SearchInput = styled.input`
-    font-size: 14px;
-    background: transparent;
-    border: none; 
-    &:focus {
-      outline: none
-    }
+  font-size: 14px;
+  background: transparent;
+  border: none; 
+  &:focus {
+    outline: none
+  }
 `;
+
+export const ErrorContainer = styled.div`
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bold;
+`; 
+
 export const Container = styled.div`
   width: 100%;
   padding: 20px;

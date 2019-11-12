@@ -26,8 +26,8 @@ const Header = () => (
           </Link>
         </NavListItem>
           {optionsCountry.map(option => ( 
-            <NavListItem>  
-              <Link key={option.value} href="/post/[category]" as={`/post/${option.name.toLowerCase()}-${option.value}`}>
+            <NavListItem key={option.value}>  
+              <Link href="/post/[category]" as={`/post/${option.name.toLowerCase()}-${option.value}`}>
                 <StyledLinkHeader>{option.name}</StyledLinkHeader>
               </Link>
           </NavListItem>

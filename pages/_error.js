@@ -1,12 +1,17 @@
 import React from 'react'
+import Header from '../components/Header';
+import { Layout, ErrorContainer } from '../styledComponents/GeneralStyled.js';
 
 function Error({ statusCode }) {
   return (
-    <p>
+    <Layout>
+      <Header />
+      <ErrorContainer>
       {statusCode
         ? `An error ${statusCode} occurred on server`
         : 'An error occurred on client'}
-    </p>
+      </ErrorContainer>
+    </Layout>
   )
 }
 

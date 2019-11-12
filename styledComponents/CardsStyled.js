@@ -9,6 +9,14 @@ export const Grid = styled.div`
   grid-row-gap: 35px;
 `;
 
+export const EmptyGrid = styled.div`
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bold;
+`; 
+
 export const Card = styled.div`
   border-radius: 5px;
   background: white;

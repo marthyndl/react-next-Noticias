@@ -10,6 +10,14 @@ export const List = styled.div`
   width: 100%;
 `;
 
+export const EmptyList = styled.div`
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bold;
+`; 
+
 export const ListItem = styled.div`
     display: flex;
     margin-bottom: 10px;
@@ -39,3 +47,4 @@ export const TimeAndSourceItemList =styled(TimeAndSource)`
   font-size: 16px;
   font-weight: 300;
 `;
+
