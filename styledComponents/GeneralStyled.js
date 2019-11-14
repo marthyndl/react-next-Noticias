@@ -90,6 +90,16 @@ export const SearchInput = styled.input`
   }
 `;
 
+export const StyledButtonSearch = styled.button`
+  background: transparent;
+  border: none;   
+  &:focus {
+  outline: none
+  }
+  cursor:${props => props.disabled? "auto" : "pointer"};
+  opacity: ${props => props.disabled ? "0.2" : "1"}; 
+`;
+
 export const ErrorContainer = styled.div`
   font-size: 18px;
   font-weight: 400;
@@ -109,7 +119,6 @@ export const TitleContainer = styled.div`
   font-size: 52px;
   font-weight: 400;
   margin-bottom: 20px;
-  text-transform: capitalize;
 `;
 
 export const Divider = styled.div`
@@ -117,7 +126,8 @@ export const Divider = styled.div`
   height: 3px;
   display: block;
   margin: 0px 0px 30px;
-  background: linear-gradient(to right, rgb(252, 75, 99) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(to right, rgb(252, 75, 99) 0%, 
+              rgba(255, 255, 255, 0.01) 100%);
 `;
 
 export const Content = styled.div`

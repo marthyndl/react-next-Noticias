@@ -4,14 +4,14 @@ import { fetchNewsByText } from '../../rest-api/news';
 import Error from '../_error';
 import { Layout } from '../../styledComponents/GeneralStyled.js';
 
+
 const SearchText = ({ errorCode, news, title }) => {
   if (errorCode) {
     return <Error statusCode={errorCode} />
   }
-
   return (
     <Layout>
-      <Header />
+      <Header searchtext={title}/>
       <ListNews news={news} title={title}/>
     </Layout>
   )
@@ -20,6 +20,7 @@ const SearchText = ({ errorCode, news, title }) => {
 SearchText.getInitialProps = async (context) => {
 
   const { searchtext } = context.query;
+  console.log(searchtext);
   const data = await fetchNewsByText(searchtext);
   if(!data.errorCode) { 
     console.log(`Show data fetched. Count: ${data.news.length}`);

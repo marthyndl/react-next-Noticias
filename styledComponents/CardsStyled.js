@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import {TimeAndSource, Picture, TitleList} 
-       from './GeneralStyled.js';
+    from './GeneralStyled.js';
 
 export const Grid = styled.div`
   grid-template-columns: repeat(3,1fr);
@@ -35,6 +35,6 @@ export const PictureCard = styled(Picture)`
 `;
 
 export const TimeAndSourceCard  = styled(TimeAndSource)`
-    font-weight: 400;
-    font-size: 18px;
+  font-weight: 400;
+  font-size: 18px;
 `;

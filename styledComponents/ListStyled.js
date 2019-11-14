@@ -1,10 +1,6 @@
 import styled, { css } from "styled-components";
 import {TimeAndSource, Picture, TitleList} 
-       from './GeneralStyled.js';
-
-// Grays
-const gray_title = '#383737';
-const color_pink = '#FC4B63';
+    from './GeneralStyled.js';
 
 export const List = styled.div`
   width: 100%;
@@ -19,16 +15,16 @@ export const EmptyList = styled.div`
 `; 
 
 export const ListItem = styled.div`
-    display: flex;
-    margin-bottom: 10px;
-    background: white;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(237, 237, 240);
-    border-image: initial;
-    overflow: hidden;
-    border-radius: 5px;
-    transition: box-shadow 0.15s ease-in-out 0s;
+  display: flex;
+  margin-bottom: 10px;
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(237, 237, 240);
+  border-image: initial;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: box-shadow 0.15s ease-in-out 0s;
 `;
 
 export const TitleItemList =  styled(TitleList)`
@@ -46,5 +42,4 @@ export const PictureItemList = styled(Picture)`
 export const TimeAndSourceItemList =styled(TimeAndSource)`
   font-size: 16px;
   font-weight: 300;
-`;
-
+`

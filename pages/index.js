@@ -10,7 +10,6 @@ const Index = ({ errorCode, news }) => {
   if (errorCode) {
     return <Error statusCode={errorCode} />
   }
-     
   return (
     <Layout>
       <Header />
