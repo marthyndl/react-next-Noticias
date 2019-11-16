@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Constants from '../constants/Constants'
+import Constants from '../constants/Constants';
 import InputSearch from '../components/InputSearch';
 import { MainHeader, NavHeader, TopHeader, TitleHeader, NavList, NavListItem, StyledLinkHeader } 
       from '../styledComponents/GeneralStyled.js';

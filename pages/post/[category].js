@@ -2,7 +2,7 @@ import Header from '../../components/Header';
 import ListNews from '../../components/ListNews';
 import { fetchNewsByCategory } from '../../rest-api/news';
 import Error from '../_error';
-import Constants from '../../constants/Constants'
+import Constants from '../../constants/Constants';
 import { Layout } from '../../styledComponents/GeneralStyled.js';
 
 

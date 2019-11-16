@@ -2,24 +2,25 @@ import React, { Component} from "react";
 import Link from 'next/link';
 import Router from 'next/router';
 import { deleteSpecialCharacters } from '../utils/StringUtils';
-import { SearchContainer, SearchInput, StyledButtonSearch } 
+import { SearchContainer, SearchItem, StyledButtonSearch } 
       from '../styledComponents/GeneralStyled.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 
 class InputSearch extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {valueInputSearch: ''};
     if(props.searchtext) {
-      this.state = {value: props.searchtext.trim()};
+      this.state = {valueInputSearch: props.searchtext.trim()};
     }  
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: deleteSpecialCharacters(event.target.value)});
+    this.setState({valueInputSearch: deleteSpecialCharacters(event.target.value)});
   }
 
   handleKeyPress(event) {
@@ -35,13 +36,13 @@ class InputSearch extends Component {
   render() {
     return (
       <SearchContainer>
-          <SearchInput type="text" placeholder="Buscar Palabra..." 
-            value={this.state.value} 
+          <SearchItem type="text" placeholder="Buscar Palabra..." 
+            value={this.state.valueInputSearch} 
             onChange={this.handleChange}
             onKeyPress = {this.handleKeyPress}
           />
-          <Link scroll={false} href="/search/[searchtext]" as={`/search/${this.state.value.trim()}`}>
-              <StyledButtonSearch disabled={!this.state.value.trim()} >
+          <Link scroll={false} href="/search/[searchtext]" as={`/search/${this.state.valueInputSearch.trim()}`}>
+              <StyledButtonSearch disabled={!this.state.valueInputSearch.trim()} >
                 <FontAwesomeIcon icon={faSearch} color="black" size="lg"/>
               </StyledButtonSearch>
           </Link>
@@ -49,6 +50,10 @@ class InputSearch extends Component {
     );
   }
 
+}
+
+InputSearch.propTypes = {
+  valueInputSearch: PropTypes.string,
 }
 
 export default InputSearch;

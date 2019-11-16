@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import PropTypes from 'prop-types';
 
 const fontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif';
 const color_background = '#f5f5f5';
@@ -81,7 +82,7 @@ export const SearchContainer = styled.div`
   float: right;
 `;
 
-export const SearchInput = styled.input`
+export const SearchItem = styled.input`
   font-size: 14px;
   background: transparent;
   border: none; 
@@ -99,6 +100,15 @@ export const StyledButtonSearch = styled.button`
   cursor:${props => props.disabled? "auto" : "pointer"};
   opacity: ${props => props.disabled ? "0.2" : "1"}; 
 `;
+
+StyledButtonSearch.propTypes = {
+  disabled: PropTypes.bool
+};
+
+StyledButtonSearch.defaultProps = {
+  cursor: "pointer",
+  opacity: "1"
+};
 
 export const ErrorContainer = styled.div`
   font-size: 18px;
@@ -161,3 +171,4 @@ export const TitleList = styled.h3`
     color: ${color_pink};
   }
 `;
+
