@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const fontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif';
 const color_background = '#f5f5f5';
 const color_gray = '#e5e5e5';
-const color_pink = '#FC4B63';
+const color_pink = '#4bb5fc';
 const gray_title_List = '#383737';
 
 
@@ -24,7 +24,7 @@ export const Layout = styled.div`
 export const MainHeader = styled.header`
   padding: 0;
   width: 100%;
-  background: linear-gradient(to bottom, rgb(252, 75, 99) 0%, 
+  background: linear-gradient(to bottom, rgb(75, 208, 252) 0%, 
               rgba(255, 255, 255, 0.01) 100%);
 `;
 
